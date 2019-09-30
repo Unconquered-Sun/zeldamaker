@@ -4,6 +4,7 @@ import pymunk
 import pymunk.pygame_util
 from pygame_functions import *
 from player import Player
+from zeldamap import Block, ZeldaMap
 
 
 class ZeldaGame:
@@ -17,6 +18,10 @@ class ZeldaGame:
 		self.clock = pygame.time.Clock()
 		nextFrame = clock()
 		frame = 0
+
+		self.map = ZeldaMap(["wallcorner1.png/skip/walltop1.png/skip/walltop1.png/skip/walltop1.png/skip","","wallleft1.png/skip/block1.png/block1.png/block1.png"])
+
+		self.block = Block("Sprites/block1.png",[0,0])
 
 		self.player = Player("Sprites/links.gif",32)
 
@@ -79,13 +84,13 @@ class ZeldaGame:
 
 				#Player Movement
 				if moveUp == True:
-					self.player.moveDirection(3,5)
+					self.player.moveDirection(3,10)
 				elif moveDown == True:
-					self.player.moveDirection(1,5)
+					self.player.moveDirection(1,10)
 				if moveRight == True:
-					self.player.moveDirection(0,5)
+					self.player.moveDirection(0,10)
 				elif moveLeft == True:
-					self.player.moveDirection(2,5)
+					self.player.moveDirection(2,10)
 
 
 

@@ -8,7 +8,7 @@ class Player(pygame.sprite.Sprite):
 		self.sprite = makeSprite(imageFile, frames)
 
 		moveSprite(self.sprite,512,283,True)
-		transformSprite(self.sprite,0, .5)
+		transformSprite(self.sprite,0, .30)
 		showSprite(self.sprite)
 
 	#0=right, 1=down, 2=left, 3=up
